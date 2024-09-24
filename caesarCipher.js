@@ -6,16 +6,24 @@ function caesarCipher(string, factor) {
     const checkUpperOrLowerCase = (string, factor) => {
       const characters = string.split('');
 
+      const convertLowerCase = (lowerCaseCharCode, factor) => {
+        return String.fromCharCode(lowerCaseCharCode + factor);
+      }
+
+      const convertUpperCase = (upperCaseCharCode, factor) => {
+        return String.fromCharCode(upperCaseCharCode + factor);
+      }
+
       characters.forEach((char, index) => {
         const characterCode = char.charCodeAt(0);
         if (characterCode >= 65 && characterCode <= 90) {
 
-          const convertedChar = String.fromCharCode(characterCode + factor);
+          const convertedChar = convertLowerCase(characterCode, factor);
           characters[index] = convertedChar;
 
         } else if (characterCode >= 97 && characterCode <= 122) {
 
-          const convertedChar = String.fromCharCode(characterCode + factor);
+          const convertedChar = convertUpperCase(characterCode, factor);
           characters[index] = convertedChar;
 
         }
