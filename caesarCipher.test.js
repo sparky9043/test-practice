@@ -7,4 +7,5 @@ test('Should exist', () => {
   expect(caesarCipher('wxyz', 3)).toBe('zabc');
   expect(caesarCipher('wxyz', 4)).toBe('abcd');
   expect(caesarCipher('WXYZ', 3)).toBe('ZABC');
+  expect(caesarCipher('abcd', -3)).toBe('xyza');
 });
