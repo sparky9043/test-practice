@@ -7,8 +7,6 @@
 
 function caesarCipher(string, factor) {
 
-  console.log('hello');
-
   const lowerCaseMin = 97;
   const lowerCaseMax = 122;
 
