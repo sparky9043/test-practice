@@ -1,3 +1,10 @@
+/* 
+
+  Make the function work for converting the following:
+    1. caesarCipher('abcd', -4) should return 'xyza'.
+    2. caesarCipher('ABCD', -4) should return 'XYZA'. 
+*/
+
 function caesarCipher(string, factor) {
 
   const lowerCaseMin = 97;
