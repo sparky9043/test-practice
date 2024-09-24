@@ -25,6 +25,9 @@ function caesarCipher(string, factor) {
         if (lowerCaseCharCode + factor > lowerCaseMax) {
           const convertedCharCode = lowerCaseMin + lowerCaseCharCode + factor - lowerCaseMax - 1;
           return String.fromCharCode(convertedCharCode);
+        } else if (lowerCaseCharCode + factor < lowerCaseMin) {
+          const convertedCharCode = lowerCaseMax - (lowerCaseMin - (lowerCaseCharCode + factor)) + 1;
+          return String.fromCharCode(convertedCharCode);
         }
 
         return String.fromCharCode(lowerCaseCharCode + factor);
