@@ -1,17 +1,18 @@
 const calculator = {
   
-  add: function(a, b) {
+  add(a, b) {
     return a + b;
   },
 
-  subtract: function(a, b) {
+  subtract(a, b) {
     return a - b;
   },
 
-  divide: function(a, b) {
+  divide(a, b) {
     if (b === 0) return undefined;
     return a / b;
-  }
+  },
+
 };
 
 module.exports = calculator;
