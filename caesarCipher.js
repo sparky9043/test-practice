@@ -25,6 +25,13 @@ function caesarCipher(string, factor) {
 
       const convertUpperCase = (upperCaseCharCode, factor) => {
         
+        if (upperCaseCharCode < upperCaseMin || upperCaseCharCode > upperCaseMax) return;
+
+        if (upperCaseCharCode + factor > upperCaseMax) {
+          const convertedCharCode = upperCaseMin + upperCaseCharCode + factor - upperCaseMax - 1;
+          return String.fromCharCode(convertedCharCode);
+        }
+
         return String.fromCharCode(upperCaseCharCode + factor);
       }
 
