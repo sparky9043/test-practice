@@ -40,7 +40,7 @@ function caesarCipher(string, factor) {
         if (upperCaseCharCode + factor > upperCaseMax) {
           const convertedCharCode = upperCaseMin + upperCaseCharCode + factor - upperCaseMax - 1;
           return String.fromCharCode(convertedCharCode);
-        }else if (upperCaseCharCode + factor < upperCaseMin) {
+        } else if (upperCaseCharCode + factor < upperCaseMin) {
           const convertedCharCode = upperCaseMax - (upperCaseMin - (upperCaseCharCode + factor)) + 1;
           return String.fromCharCode(convertedCharCode);
         }
